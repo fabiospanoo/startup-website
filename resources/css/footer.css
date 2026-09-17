@@ -1,0 +1,223 @@
+/* --- FOOTER --- */
+.footer {
+  background-color: var(--clr-charcoal);
+  color: var(--clr-alabaster);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 2px solid var(--clr-deep-teal);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Grid Layout principale */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-alabaster);
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+/* Piccola linea d'accento sotto i titoli delle colonne */
+.footer-col h4::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--clr-muted-teal);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+/* Brand e descrizione */
+.footer-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--clr-alabaster);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo span {
+  color: var(--clr-muted-teal);
+}
+
+.brand-desc {
+  color: var(--clr-alabaster);
+  opacity: 0.75;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Pulsanti Social con icone*/
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: var(--clr-jet-black);
+  color: var(--clr-alabaster);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--clr-dark-slate);
+}
+
+.social-links svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* effetto hover */
+
+.social-links a:hover {
+  background-color: var(--clr-deep-teal);
+  color: var(--clr-alabaster);
+  border-color: var(--clr-muted-teal);
+  transform: translateY(-3px);
+}
+
+/* Link del Footer */
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--clr-alabaster);
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--clr-muted-teal);
+  transform: translateX(4px);
+}
+
+/* Sezione Newsletter */
+.newsletter-col p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--clr-jet-black);
+  border: 1px solid var(--clr-dark-slate);
+  border-radius: 6px;
+  color: var(--clr-alabaster);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--clr-alabaster);
+  opacity: 0.5;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--clr-muted-teal);
+}
+
+.btn-newsletter {
+  background-color: var(--clr-muted-teal);
+  color: var(--clr-onyx);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-newsletter:hover {
+  background-color: var(--clr-deep-teal);
+  color: var(--clr-alabaster);
+}
+
+/* Barra Inferiore */
+.footer-bottom {
+  border-top: 1px solid var(--clr-dark-slate);
+  padding-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --- Adattamenti Responsive per Mobile / Tablet (< 992px) --- */
+@media (max-width: 991.98px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Diventa a 2 colonne */
+    gap: 30px;
+  }
+}
+
+/* Smartphone (schermi < 576px) */
+@media (max-width: 575.98px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr; /* Diventa a 1 colonna singola */
+    gap: 35px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center; /* Centra le icone social su mobile */
+  }
+
+  .newsletter-form {
+    flex-direction: column; /* Input e Bottone l'uno sotto l'altro su mobile */
+  }
+
+  .btn-newsletter {
+    width: 100%;
+  }
+}

@@ -1,0 +1,118 @@
+/* Base Navbar */
+.navbar-custom {
+  background-color: var(--clr-charcoal);
+  border-bottom: 2px solid var(--clr-deep-teal);
+  padding: 0.8rem 1.5rem;
+  transition: background-color 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand */
+.navbar-custom .navbar-brand {
+  color: var(--clr-alabaster);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--clr-muted-teal);
+}
+
+/* Links di Navigazione */
+.navbar-custom .nav-link {
+  color: var(--clr-alabaster);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--clr-muted-teal);
+}
+
+/* Effetto Underline Animato */
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  left: 50%;
+  background-color: var(--clr-muted-teal);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+  width: 75%;
+}
+
+.navbar-custom.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-custom {
+    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* Logo o elementi interni (opzionale) */
+.navbar-custom .navbar-brand img {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+
+/* Stato rimpicciolito allo scroll */
+.navbar-custom.navbar-scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(32, 40, 44, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-custom.navbar-scrolled .navbar-brand img {
+    height: 32px; /* Riduce leggermente anche il logo se presente */
+}
+
+/* Font e colori */
+
+h1,h2,h3,h4,h5,h6,p,a,label,span,li,button{
+  font-family: 'Space Mono', sans-serif;
+  color: var(--clr-alabaster);
+}
+
+/* --- Adattamenti Responsive per Mobile / Tablet (< 992px) --- */
+@media (max-width: 991.98px) {
+  .navbar-custom .navbar-collapse {
+    background-color: var(--clr-charcoal);
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--clr-dark-slate);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-custom .nav-item {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .navbar-custom .nav-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Icona */
+.icon{
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
